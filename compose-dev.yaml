@@ -6,9 +6,11 @@ services:
     build:
       context: .
       target: development
+    init: true
     ports:
       - 80
-    tty: true
     restart: always
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
+    - type: bind
+      source: /var/run/docker.sock
+      target: /var/run/docker.sock
