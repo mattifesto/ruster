@@ -2,8 +2,7 @@
 # - - - - - - - - - - base - - - - - - - - - -
 #
 
-# specifying bookworm until latest uses bookworm because of git issues
-FROM rust:bookworm AS base
+FROM rust AS base
 
 
 
